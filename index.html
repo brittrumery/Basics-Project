@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 Project</title>
+    <style>
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #1a2639;
+        border: thick double #42240c;
+        border-radius: 8px;
+        padding: 20px 40px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        text-align: center;
+        color: #3e4a61;
+        font-style: italic;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin-top: 40px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto 30px;
+        border-radius: 10px;
+        max-width: 100%;
+        box-shadow: 10px 5px 5px #402a23;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 14px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 20px auto 20px auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: #1a2639;
+      }
+
+      li {
+        padding: 3px;
+      }
+      ul {
+        margin-bottom: 60px;
+        text-align: center;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #a75265;
+        color: #f5f4e8;
+        font-size: 12;
+        padding: 15px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: none;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 400ms ease;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        background-color: #45171d;
+      }
+
+      .footer {
+        text-align: center;
+        margin: 40px auto 10px auto;
+      }
+      .farm {
+        color: #062925;
+        font-weight: bold;
+      }
+      .services {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background: linear-gradient(
+          110.3deg,
+          rgb(238, 179, 123) 8.7%,
+          rgb(216, 103, 77) 47.5%,
+          rgb(167, 72, 86) 89.1%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>LedgeView Farm</h1>
+      <h2>"I am happy out here"</h2>
+      <img
+        src="/basics-project/photo/stockphoto.jpg"
+        alt="Barn in a field"
+        width="600"
+      />
+      <p>
+        On the surface, <span class="farm">LedgeView Farm</span> is a quiet
+        seni-fictional homestead long the
+        <a
+          href="https://en.wikipedia.org/wiki/Union_River_(Maine)"
+          target="_blank"
+          >Union River in Ellsworth, Maine.</a
+        >
+        But beneath that quaint appreance is a fun-loving family who spends sun
+        up to sun down working the land year round. There's never a dull monet
+        (or down time) at <span class="farm">LedgeView Farm</span>. When
+        Brittany and Ben purchased the delapitated home in 2017 they were up for
+        the challange of bringing the entire property back to life. Inspiraed by
+        tails of what <span class="farm">LedgeView Farm</span> farm once was
+        they embarked on andventure to restore the old farm house, bring aminals
+        back to the property, till the soil, and prune the fruit trees.
+      </p>
+
+      <p>
+        The Rumery family welcomes visitors year round for a variety of events.
+        Come boil sap in the Sugar Shack with Ben, head to the river for a
+        guided fly fishing trip, bring the family apple picking or to visit the
+        heard of Highland Cattle. If you're in a hurry swing on by the farm
+        stand, open dusk til dawn.
+
+        <em
+          ><div class="services">
+            <span class="farm">🌳LedgeView Farm</span> offers seasonal classes
+            and can also be rented for private events.🌳
+          </div></em
+        >
+      </p>
+      <hr />
+      <h3>Learn More about our Goods and Services</h3>
+
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Maple_syrup" target="_blank"
+            >Maple Syrup</a
+          >
+        </li>
+        <li>
+          <a href="https://www.maineapples.org/varieties/" target="_blank"
+            >Orchards</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/Highland_cattle"
+            target="_blank"
+            >Highland Cattle</a
+          >
+        </li>
+      </ul>
+
+      <button class="mailing-list">
+        Join us for a Class <br />
+        Summer/ Fall/ Winter/ Spring
+      </button>
+      <p class="footer">This page was built by Brittany Rumery</p>
+    </div>
+    <script>
+      function mailing() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let interestClass = prompt("What season will you be joining us?");
+        interestClass = interestClass.toLocaleLowerCase().trim();
+
+        if (interestClass === "spring" || interestClass === "summer") {
+          alert(
+            `Thank you ${name}, we'll be in touch about gardening classes for the ${interestClass} 🌻🌞`
+          );
+        } else if (interestClass === "fall") {
+          alert(
+            `Thank you ${name}, we'll be in touch about fruit tree care for the ${interestClass} 🍎`
+          );
+        } else if (interestClass === "winter") {
+          alert(
+            `Thank you ${name}, we'll be in touch about Maple syrup making for the ${interestClass} 🍁`
+          );
+        }
+      }
+      let mailingList = document.querySelector(".mailing-list");
+      mailingList.addEventListener("click", mailing);
+    </script>
+  </body>
+</html>
